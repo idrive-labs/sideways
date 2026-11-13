@@ -1,0 +1,8 @@
+{
+  "name": "sideways",
+  "version": "0.6.4",
+  "description": "Drift analyser for BMW iDrive 7 / iDrive 8 head units",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "scripts": { "build": "./tools/make_kit_app.sh" }
+}
