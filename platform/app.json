@@ -1,0 +1,56 @@
+{
+  "id": "sideways",
+  "title": "Sideways",
+  "description": "Drift analyser: drift angle, counter-steer, tyre slip and chained drift scoring over a 3D view of your car",
+  "version": "0.6.6",
+  "vendor": "sideways",
+  "loggingId": "OAD7",
+  "iconGlyph": "SW",
+  "signals": {
+    "com.harman.infotainment.systemfunctions.tasu.tasu.InternalTasu": {
+      "_instances": "SystemFunctionsInternalTasuInst1",
+      "_methods": [
+        "sendTasuRequest"
+      ],
+      "_broadcasts": [
+        "sendTasuResponse"
+      ]
+    },
+    "de.bmw.infotainment.vehicle.CDS2": {
+      "statusLongitudinalAccelerationMassCenter": "rs",
+      "statusLateralAccelerationMassCenter": "rs",
+      "statusYawVelocityVehicle": "rs"
+    },
+    "de.bmw.infotainment.vehicle.Vehicle2": {
+      "statusCarSpeed2": "rs",
+      "statusVehiclePartType": "rs"
+    },
+    "de.bmw.chassis.SteeringAngle": {
+      "ActualSteeringAngleDriver": "s",
+      "actualSteeringAngleDriverNoCRC": "s"
+    },
+    "de.bmw.powertrain.Powertrain": {
+      "ActualValueRPMWheel": "s"
+    },
+    "de.bmw.infotainment.SatellitePositioning": {
+      "basicPearlChain": "r"
+    },
+    "de.bmw.infotainment.navigation.positioning.Positioning": {
+      "_instances": "Main_Instance",
+      "currentLocation": "r"
+    }
+  },
+  "screens": [
+    {
+      "name": "MAIN",
+      "kind": "canvas",
+      "title": "Sideways",
+      "chrome": false,
+      "buttons": []
+    }
+  ],
+  "settings": [],
+  "config": {
+    "leaderboardUrl": "https://sideways.sideways-drift.workers.dev"
+  }
+}
